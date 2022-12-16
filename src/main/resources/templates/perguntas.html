@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        .containerSmart {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .quiz {
+            width: 380px;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .quiz h1 {
+            border: 2px solid #DEBE5F;
+            border-radius: 10px;
+            padding: 7px;
+        }
+
+        .pergunta {
+            margin-top: 15px;
+            border: 2px solid #DEBE5F;
+            border-radius: 10px;
+        }
+
+
+        .pergunta p {
+            font-weight: bold;
+            padding: 7px;
+            font-size: 18px;
+        } 
+
+        .option div {
+            padding: 18px;
+        }
+
+        input[type="radio"] {
+            accent-color: #DEBE5F;
+        }
+
+        form button[type="submit"] {
+            margin-top: 15px;
+            width: 33%;
+            padding: 10px;
+            /*
+            border: none;            
+            background-color: lightgray;
+            */
+            border: 2px solid #DEBE5F;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        form button[type="submit"]:hover {
+            background-color: #DEBE5F;
+        }
+
+        @media screen and (min-width: 1000px) {
+            .quiz {
+                width: 850px;
+            }
+
+            form button[type="submit"] {
+                width: 15%;
+
+            }
+
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="containerSmart quiz">
+        <h1 th:text>Quiz Tesouro Direto</h1>
+        <!--Nome vai vir do bando de dados-->
+        <form action="submit" method="POST" th:object=${qForm} class="form">
+            <div class="pergunta">
+                <p th:text="${ques.title}">Massa de teste Massa de teste Massa de teste Massa de teste Massa de teste
+                </p>
+                <!--questão vai vir do bando de dados-->
+                <div class="option">
+                    <div class="optionA">
+                        <input type="radio" name="radio" th:name="|questions[${i.index}].chose|" th:value="1" />
+                        <span th:text="${ques.optionA}">Massa de teste Massa de teste Massa de teste Massa de teste
+                            Massa de
+                            teste Massa de teste Massa de teste Massa de teste</span>
+                    </div>
+                    <div class="optionB">
+                        <input type="radio" name="radio" th:name="|questions[${i.index}].chose|" th:value="2" />
+                        <span th:text="${ques.optionB}">Massa de teste Massa de teste Massa de teste Massa de teste
+                            Massa de
+                            teste Massa de teste Massa de teste Massa de teste</span>
+                    </div>
+                    <div class="optionC">
+                        <input type="radio" name="radio" th:name="|questions[${i.index}].chose|" th:value="3" />
+                        <span th:text="${ques.optionC}">Massa de teste Massa de teste Massa de teste Massa de teste
+                            Massa de
+                            teste Massa de teste Massa de teste Massa de teste</span>
+                    </div>
+                    <div class="optionD">
+                        <input type="radio" name="radio" th:name="|questions[${i.index}].chose|" th:value="4" />
+                        <span th:text="${ques.optionD}">Massa de teste Massa de teste Massa de teste Massa de teste
+                            Massa de
+                            teste Massa de teste Massa de teste Massa de teste</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <input type="hidden" th:name="|questions[${i.index}].quesId|" th:value="${ques.quesId}" />
+            <input type="hidden" th:name="|questions[${i.index}].title|" th:value="${ques.title}" />
+            <input type="hidden" th:name="|questions[${i.index}].ans|" th:value="${ques.ans}" />
+
+            <button type="submit">Enviar Resposta</button>
+        </form>
+    </div>
+</body>
+
+</html>

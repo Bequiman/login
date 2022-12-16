@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/perfil.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="home_logado.html" class="logo"><span class="cifrao">$</span><span class="p">implifica</span><span
+                    class="ed">Educação Financeira</span></a>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="#">Quiz</a></li>
+                <li class="nav-item"><a href="#">Perfil</a></li>
+                <li class="nav-item"><a href="#">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div th:fragment="conteudo">
+            <div class="container containerSmart">
+                <div class="ajuste">
+                    <table class="table">
+                        <tr hidden>
+                            <th>id</th>
+                            <td th:text="${contato.id}">Massa de teste</td>
+                        </tr>
+                        <tr>
+                            <th>NOME</th>
+                            <td th:text="${contato.nome}">Massa de teste</td>
+                        </tr>
+                        <tr>
+                            <th>USUÁRIO</th>
+                            <td th:text="${contato.nome_usuario}">Massa de teste</td>
+                        </tr>
+                        <tr>
+                            <th>E-MAIL</th>
+                            <td th:text="${contato.email}">thales.medeiros@estudante.iftm.edu.br</td>
+                        </tr>
+                        <tr>
+                            <th>SENHA</th>
+                            <td th:text="${contato.senha}">massa de teste</td>
+                        </tr>
+                    </table>
+                    <div class="alterar">
+                        <a th:href="@{/excluir-contato(id=${contato.id})}" class="excluir">Excluir</a>
+                        <a th:href="@{/editar-contato(id=${contato.id})}" class="editar">Editar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <small>Copyright &copy; Your Website</small>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" th:href="@{/css/cadastro.css}">   
+    <title>Document</title>   
+</head>
+
+<body>
+    <div class="containerSmart cadastro">
+        <a th:href="@{/home}" class="logo"><span class="cifrao">$</span><span class="p">implifica</span><span
+                class="ed">Educação Financeira</span></a>
+        <p class="msg">Conquiste sua Liberdade Financeira!!</p>
+        <form action="inscrever-se" method="post" th:object="${usuario}">
+            <input type="text" id="" name="" placeholder="Nome" th:field="*{nome}">
+            <input type="text" id="" name="" placeholder="Nome de usuário" th:field="*{usuario}">
+            <input type="email" id="" name="" placeholder="E-mail" th:field="*{email}">
+            <input type="password" name="" id="" placeholder="Senha" th:field="*{senha}">
+            <div class="genero">
+                <label for="">Qual é o seu gênero?</label>
+            </div>
+            <div class="divRadio">                
+                <input type="radio" id="masculino" name="genero" value="Masculino" th:field="*{genero}">
+                <label for="masculino">Masculino</label>
+                <input type="radio" id="feminino" name="genero" value="Feminino" th:field="*{genero}">
+                <label for="feminino">Feminino</label>
+                <input type="radio" id="null" name="genero" value="Null" th:field="*{genero}">
+                <label for="null">Prefiro não dizer</label>
+            </div>
+            <div class="divAniversario">
+                <label for="aniversario">Qual a sua data de nascimento?</label>
+                <input type="date" id="aniversario" name="aniversario" value="" th:field="*{aniversario}">
+            </div>
+
+            <input type="submit" value="Inscrever-se">
+
+            <!--<button type="submit">Inscrever-se</button>-->            
+        </form>
+        <p class="assine">Já tem uma conta?<a th:href="@{/login}"> Faça login</a></p>
+    </div>
+</body>
+
+</html>

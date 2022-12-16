@@ -1,0 +1,203 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.containerSmart {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+/*-----------------------------------------------HEADER-----------------------------------------------*/
+
+header {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 5px solid black;
+    padding-bottom: 7px;
+}
+
+.navbar {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-item a {
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+
+.nav-item:hover a {
+    color: #DEBE5F;
+}
+
+
+.nav-links {
+    display: flex;
+}
+
+.cifrao {
+    /*float: left; */
+    /*position: relative; */
+    font-size: 40px;
+    color: black;
+}
+
+.p {
+    font-size: 30px;
+    color: black;
+}
+
+.ed {
+    font-size: 12px;
+    display: block;
+    margin-left: 20px;
+    color: black;
+}
+
+.logo {
+    text-decoration: none;
+}
+
+.logo:hover .p {
+    color: #DEBE5F;
+}
+
+.logo:hover .ed {
+    color: #DEBE5F;
+}
+
+.logo:hover .cifrao {
+    color: #DEBE5F;
+}
+
+
+
+/*------------------------------------------------MAIN------------------------------------------------*/
+
+.container {
+    height: 330px;
+    margin-top: 70px;
+
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    width: 75%;
+}
+
+th {
+    background-clip: padding-box;
+    border: 5px solid transparent;
+    text-align: left;
+}
+
+.ajuste {
+    width: 380px;
+    margin: auto;
+}
+
+.alterar {
+    margin-top: 10px;
+    margin-left: 8px;
+}
+
+.alterar a {
+    padding: 5px 10px;
+    display: inline-block;
+    background-color: lightgray;
+}
+
+.editar {
+    margin-left: 15px;
+}
+
+.excluir:hover {
+    background-color: #DEBE5F;
+    cursor: pointer;
+}
+
+
+.editar:hover {
+    background-color: #DEBE5F;
+    cursor: pointer;
+}
+
+
+
+
+/*-----------------------------------------------FOOTER-----------------------------------------------*/
+
+.footer {
+    margin-top: 0px;
+    border-top: 5px solid black;
+    color: black;
+    padding: 25px;
+    text-align: center;
+}
+
+
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------Resolução para telas acima de 1000px-----------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+
+@media screen and (min-width: 1000px) {
+
+    .navbar {
+        width: 1000px;
+    }
+
+    .nav-item a {
+        padding: 10px 15px;
+    }
+
+    /*------------------------------------------MAIN ------------------------------------------*/
+
+    .container {
+        width: 1000px;
+        margin: auto;
+        height: 640px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0%
+    }
+
+    .ajuste {
+        width: 450px;
+        margin-top: 270px;
+    }
+
+    td {
+        padding-left: 20px;
+        font-size: 18px;
+        width: 80%;
+    }
+
+    /*----------------------------------------------FOOTER----------------------------------------------*/
+
+    .footer {
+        margin-top: 0%;
+    }
+
+}

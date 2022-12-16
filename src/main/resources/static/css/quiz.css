@@ -1,0 +1,271 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.containerSmart {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+/*-----------------------------------------------HEADER-----------------------------------------------*/
+
+header {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 5px solid black;
+    padding-bottom: 7px;
+}
+
+.navbar {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-item a {
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+
+.nav-item:hover a {
+    color: #DEBE5F;
+}
+
+
+.nav-links {
+    display: flex;
+}
+
+.cifrao {
+    /*float: left; */
+    /*position: relative; */
+    font-size: 40px;
+    color: black;
+}
+
+.p {
+    font-size: 30px;
+    color: black;
+}
+
+.ed {
+    font-size: 12px;
+    display: block;
+    margin-left: 20px;
+    color: black;
+}
+
+.logo {
+    text-decoration: none;
+}
+
+.logo:hover .p {
+    color: #DEBE5F;
+}
+
+.logo:hover .ed {
+    color: #DEBE5F;
+}
+
+.logo:hover .cifrao {
+    color: #DEBE5F;
+}
+
+
+
+/*------------------------------------------------MAIN------------------------------------------------*/
+
+.container {    
+    margin: auto;    
+    margin-top: 80px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    width: 100%;   
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container div {
+    text-align: center;
+}
+
+.divQuiz1 {
+    margin-top: 30px;    
+}
+
+.divQuiz2 {
+    margin-top: 15px;    
+}
+
+.divQuiz1 a {
+    display: inline-block;
+    background-color: lightgray;
+}
+
+
+.divQuiz2 a {
+    display: inline-block;
+    background-color: lightgray;
+}
+
+.financas {
+    padding: 10px 22px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+
+.financas:hover {
+    background-color: #DEBE5F;
+    cursor: pointer;
+}
+
+.tesouro {
+    padding: 10px 45px;
+    margin-top: 15px;
+}
+
+
+.tesouro:hover {
+    background-color: #DEBE5F;
+    cursor: pointer;
+}
+
+.acoes {
+    padding: 10px 72px;    
+}
+
+.acoes:hover {
+    background-color: #DEBE5F;
+    cursor: pointer;
+}
+
+.cripto {
+    padding: 10px 51px;
+    margin-right: 38px;
+    margin-left: 38px;
+    margin-top: 15px;
+}
+
+.cripto:hover {
+    background-color: #DEBE5F;
+    cursor: pointer;
+}
+
+
+/*-----------------------------------------------FOOTER-----------------------------------------------*/
+
+.footer {
+    margin-top: 0px;
+    border-top: 5px solid black;
+    color: black;
+    padding: 25px;
+    text-align: center;
+}
+
+
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------Resolução para telas acima de 1000px-----------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+
+@media screen and (min-width: 1000px) {
+
+    .navbar {
+        width: 1000px;
+    }
+
+    .nav-item a {
+        padding: 10px 15px;
+    }
+
+    /*------------------------------------------MAIN ------------------------------------------*/
+    .container {
+        width: 1200px;
+        margin: auto;       
+        margin-top: 80px;
+        margin-bottom: 10px;
+    }
+
+
+    img {
+        width: 42%;
+        display: block;       
+    }
+   
+    .divQuiz1 {
+        margin-top: 30px;       
+    }
+
+    .divQuiz2 {
+        margin-top: 30px;       
+    }
+ 
+    .financas {        
+        margin-left: 0px;
+    }
+
+    .financas:hover {
+        background-color: #DEBE5F;
+        cursor: pointer;
+    } 
+
+    .tesouro {       
+        margin-top: 0px;
+    }
+
+    .tesouro:hover {
+        background-color: #DEBE5F;
+        cursor: pointer;
+    }
+
+    .acoes {        
+        margin-right: 3px;
+    }
+
+    .acoes:hover {
+        background-color: #DEBE5F;
+        cursor: pointer;
+    }
+
+    .cripto {        
+        margin-right: 0px;
+        margin-left: 45px;
+        margin-top: 0px;
+    }
+
+    .cripto:hover {
+        background-color: #DEBE5F;
+        cursor: pointer;
+    }
+
+
+    /*----------------------------------------------FOOTER----------------------------------------------*/
+
+    .footer {
+        margin-top: 0%;
+    }
+
+}

@@ -1,0 +1,131 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.containerSmart {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.cadastro {
+    width: 350px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.cifrao {
+    font-size: 40px;
+    color: black;
+    margin-left: 110px;
+}
+
+.p {
+    font-size: 30px;
+    color: black;
+}
+
+.ed {
+    font-size: 12px;
+    color: black;
+    display: block;
+    text-align: center;
+    margin-left: 20px;
+}
+
+.logo {
+    text-decoration: none;
+}
+
+.logo:hover .p {
+    color: #DEBE5F;
+}
+
+.logo:hover .ed {
+    color: #DEBE5F;
+}
+
+.logo:hover .cifrao {
+    color: #DEBE5F;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    outline-color: #DEBE5F;
+}
+
+.genero {
+    margin-top: 20px;
+}
+
+.divRadio {
+    margin-top: 15px;
+    margin-left: 8px;
+}
+
+.divRadio label {
+    margin-right: 10px;
+}
+
+input[type="radio"] {
+    accent-color: #DEBE5F;
+}
+
+.divAniversario {
+    margin-top: 20px;
+}
+
+input[type="date"] {
+    display: block;
+    outline-color: #DEBE5F;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 8px;
+}
+
+
+input[type="submit"] {
+    margin-top: 5px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #DEBE5F;
+}
+
+.assine {
+    margin-top: 10px;
+}
+
+.assine a {
+    text-decoration: none;
+    color: black;
+}
+
+.assine a:hover {
+    color: #DEBE5F;
+    text-decoration: underline;
+}
+
+.msg {
+    margin-top: 25px;
+    text-align: center;
+}
+
+
+
+
